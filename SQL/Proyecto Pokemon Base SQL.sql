@@ -1,4 +1,4 @@
-CREATE TABLE objecto(
+CREATE TABLE objeto(
 	id_objeto INTEGER,
 	nom_objeto VARCHAR(50),
 	ataque INTEGER,
@@ -6,13 +6,13 @@ CREATE TABLE objecto(
 	defensa INTEGER,
 	def_especial INTEGER,
 	velocidad INTEGER,
-	precio INTEGER,
+	precio INTEGER
 );
 
 CREATE TABLE movimiento (
 	id_movimiento INTEGER,
 	nom_movimiento VARCHAR(20) CONSTRAINT nom_movimiento_NN NOT NULL,
-	nivel_aprendizaje INTEGER CONSTRAINT nom_movimiento_NN NOT NULL,
+	nivel_aprendizaje INTEGER CONSTRAINT nivel_aprendizaje_NN NOT NULL,
 	pp_max INTEGER,
 	tipo VARCHAR(20),
 	potencia INTEGER,
@@ -71,24 +71,67 @@ CREATE TABLE entrenador(
 	CONSTRAINT usuario_is_UNIQUE UNIQUE (usuario)
 );
 
-ALTER TABLE objeto
-	ADD CONSTRAINT objecto_PK PRIMARY KEY (id_objeto)
-;
 
 ALTER TABLE objeto
-	ADD CONSTRAINT mochila_PK PRIMARY KEY (id_entrenador)
+	ADD CONSTRAINT objeto_PK_id_objeto PRIMARY KEY (id_objeto)
 ;
 
-ALTER TABLE objeto
-	ADD CONSTRAINT mochila_FK_entrenador FOREIGN KEY (id_entrenador) REFERENCES entrenador(id_entrenador)
+ALTER TABLE movimiento
+	ADD CONSTRAINT movimiento_PK_id_movimiento PRIMARY KEY (id_movimiento)
 ;
 
-ALTER TABLE objeto
-	ADD CONSTRAINT mochila_PK PRIMARY KEY (id_objeto)
+ALTER TABLE movimiento
+	ADD CONSTRAINT movimiento_CK_id_movimiento CHECK(id_movimiento IN('ataque', 'estado', 'mejora'))
 ;
 
-ALTER TABLE objeto
-	ADD CONSTRAINT mochila_FK_objeto FOREIGN KEY (id_objeto) REFERENCES objeto(id_objeto)
+ALTER TABLE movimiento_pokemon
+	ADD CONSTRAINT movimiento_pokemon_PK_id_pokemon_id_movimiento PRIMARY KEY(id_pokemon, id_movimiento)
+;
+
+ALTER TABLE mochila
+	ADD CONSTRAINT mochila_PK_id_entrenador_id_objeto PRIMARY KEY (id_entrenador, id_objeto)
+;
+
+ALTER TABLE pokedex
+	ADD CONSTRAINT pokedex_PK_num_pokedex PRIMARY KEY (num_pokedex)
+;
+
+ALTER TABLE pokemon
+	ADD CONSTRAINT pokemon_PK_id_pokemon PRIMARY KEY (id_pokemon)
+;
+
+ALTER TABLE pokemon
+	ADD CONSTRAINT pokemon_CK_between_1_3 CHECK(equipo BETWEEN 1 AND 3)
+;
+
+ALTER TABLE pokemon
+	ADD CONSTRAINT pokeomn_CK_sexo_H_M_X CHECK(SEXO IN('H', 'M','X'))
+;
+
+ ALTER TABLE entrenador
+	ADD CONSTRAINT entrenador_PK_id_entrenador PRIMARY KEY (id_entrenador)
+;
+
+ALTER TABLE entrenador
+	ADD CONSTRAINT entrenador_CK_pokedolares_>_2_MM CHECK(pokedolares BETWEEN 0 AND 2000000000)
+;
+
+
+
+ALTER TABLE movimiento_pokemon
+	ADD CONSTRAINT movimiento_Pokemon_FK_id_movimiento FOREIGN KEY(id_movimiento) REFERENCES movimiento(id_movimiento)
+;
+
+ALTER TABLE movimiento_pokemon
+	ADD CONSTRAINT movimiento_pokemon_FK_id_pokemon FOREIGN KEY(id_pokemon) REFERENCES pokemon(id_pokemon)
+;
+
+ALTER TABLE mochila
+	ADD CONSTRAINT mochila_FK_id_entrenador FOREIGN KEY (id_entrenador) REFERENCES entrenador(id_entrenador)
+;
+
+ALTER TABLE mochila
+	ADD CONSTRAINT mochila_FK_id_objeto FOREIGN KEY (id_objeto) REFERENCES objeto(id_objeto)
 ;
 
 /* por incluir
@@ -104,23 +147,11 @@ ALTER TABLE pokedex
 */
 
 ALTER TABLE pokemon
-	ADD CONSTRAINT pokedex_PK PRIMARY KEY (num_pokedex)
+	ADD CONSTRAINT pokemon_FK_id_entrenador FOREIGN KEY (id_entrenador) REFERENCES entrenador(id_entrenador)
 ;
 
 ALTER TABLE pokemon
-	ADD CONSTRAINT pokemon_PK PRIMARY KEY (id_pokemon)
-;
-
-ALTER TABLE pokemon
-	ADD CONSTRAINT pokemon_FK_entrenador FOREIGN KEY (id_entrenador) REFERENCES entrenador(id_entrenador)
-;
-
-ALTER TABLE pokemon
-	ADD CONSTRAINT pokemon_FK_pokedex FOREIGN KEY (num_pokedex) REFERENCES pokedex(num_pokedex)
-;
-
-ALTER TABLE pokemon
-	ADD CONSTRAINT sexo_is_only_H_M_or_X CHECK(SEXO IN('H', 'M','X'))
+	ADD CONSTRAINT pokemon_FK_num_pokedex FOREIGN KEY (num_pokedex) REFERENCES pokedex(num_pokedex)
 ;
 
 /* por incluir
@@ -128,35 +159,3 @@ ALTER TABLE pokemon
 	ADD CONSTRAINT estado_ch CHECK()
 ;
 */
-
-ALTER TABLE pokemon
-	ADD CONSTRAINT equipo_between_1_and_3 CHECK(equipo BETWEEN 1 AND 3)
-;
-
- ALTER TABLE entrenador
-	ADD CONSTRAINT entrenador_is_PRIMARY_KEY PRIMARY KEY (id_entrenador)
-;
-
-ALTER TABLE entrenador
-	ADD CONSTRAINT pokedolares_less_than_2_MM CHECK(equipo BETWEEN 0 AND 2000000000)
-;
-
-ALTER TABLE movimiento
-	ADD CONSTRAINT id_movimiento_PK PRIMARY KEY (id_movimiento)
-;
-
-ALTER TABLE movimiento
-	ADD CONSTRAINT id_movimiento_inside_classes CHECK(id_movimiento IN('ataque', 'estado', 'mejora'))
-;
-
-ALTER TABLE movimiento_pokemon
-	ADD CONSTRAINT id_pokemon_id_movimiento_PK PRIMARY KEY(id_pokemon, id_movimiento)
-;
-
-ALTER TABLE movimiento_pokemon
-	ADD CONSTRAINT id_movimiento_FK_movimiento FOREIGN KEY(id_movimiento) REFERENCES movimiento(id_movimiento)
-;
-
-ALTER TABLE movimiento_pokemon
-	ADD CONSTRAINT id_pokemon_FK_pokemon FOREIGN KEY(id_pokemon) REFERENCES pokemon(id_pokemon)
-;
