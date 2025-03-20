@@ -113,7 +113,7 @@ ALTER TABLE pokemon
 ;
 
 ALTER TABLE entrenador
-	ADD CONSTRAINT entrenador_CK_pokedolares_>_2_MM CHECK(pokedolares BETWEEN 0 AND 2000000000)
+	ADD CONSTRAINT entrenador_CK_pokedolares_menor_2_MM CHECK(pokedolares BETWEEN 0 AND 2000000000)
 ;
 
 
