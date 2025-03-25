@@ -310,3 +310,23 @@ ALTER TABLE pokemon
 	ADD CONSTRAINT estado_ch CHECK()
 ;
 */
+
+INSERT INTO entrenador (id_entrenador, usuario, pass, pokedolares)
+VALUES (1, 'Antonio', '123456', 17260);
+
+INSERT INTO pokemon VALUES (1, 1, 25, 'Pika', 35, 55, 40, 50, 50, 90, 20, 5, 'H', NULL, 1);
+INSERT INTO pokemon VALUES (2, 1, 7, 'Tortuguita', 44, 48, 65, 50, 64, 43, 18, 5, 'M', NULL, 2);
+INSERT INTO pokemon VALUES (3, 1, 16, 'Pidge', 40, 45, 40, 35, 35, 56, 15, 5, 'H', NULL, 3);
+INSERT INTO pokemon VALUES (4, 1, 129, 'Magik', 20, 10, 55, 15, 20, 80, 10, 5, 'X', NULL, NULL);
+INSERT INTO pokemon VALUES (5, 1, 43, 'Oddie', 45, 50, 55, 75, 65, 30, 12, 5, 'M', NULL, NULL);
+INSERT INTO pokemon VALUES (6, 1, 52, 'Meow', 40, 45, 35, 40, 40, 90, 16, 5, 'H', NULL, NULL);
+
+INSERT INTO entrenador (id_entrenador, usuario, pass, pokedolares)
+VALUES (2, 'Pedro', '123456', 1520);
+
+INSERT INTO pokemon VALUES (7, 2, 4, 'Charmy', 39, 52, 43, 60, 50, 65, 17, 5, 'H', NULL, 1);
+INSERT INTO pokemon VALUES (8, 2, 10, 'Cater', 45, 30, 35, 20, 20, 45, 8, 5, 'M', NULL, 2);
+INSERT INTO pokemon VALUES (9, 2, 19, 'Ratta', 30, 56, 35, 25, 35, 72, 14, 5, 'H', NULL, 3);
+INSERT INTO pokemon VALUES (10, 2, 27, 'Sandy', 50, 75, 85, 20, 30, 40, 19, 5, 'M', NULL, NULL);
+INSERT INTO pokemon VALUES (11, 2, 41, 'Zubat', 40, 45, 35, 30, 40, 55, 13, 5, 'X', NULL, NULL);
+INSERT INTO pokemon VALUES (12, 2, 63, 'Abra', 25, 20, 15, 105, 55, 90, 11, 5, 'H', NULL, NULL);
