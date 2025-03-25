@@ -51,6 +51,7 @@ CREATE TABLE pokemon(
 	num_pokedex INTEGER,
 	mote VARCHAR(20),
 	vitalidad INTEGER CONSTRAINT vitalidad_NN NOT NULL,
+	vitalidad_restante INTEGER CONSTRAINT vitalidad_r_NN NOT NULL,
 	ataque INTEGER CONSTRAINT ataque_NN NOT NULL,
 	defensa INTEGER CONSTRAINT defensa_NN NOT NULL,
 	at_especial INTEGER CONSTRAINT at_especial_NN NOT NULL,
@@ -95,8 +96,8 @@ INSERT INTO pokedex VALUES(21, 'Spearow', '21.gif', '21.gif', 'cries_pokemon_leg
 INSERT INTO pokedex VALUES(22, 'Fearow', '22.gif', '22.gif', 'cries_pokemon_legacy_22.ogg', NULL, 'normal', 'volador');
 INSERT INTO pokedex VALUES(23, 'Ekans', '23.gif', '23.gif', 'cries_pokemon_legacy_23.ogg', 22, 'veneno', NULL);
 INSERT INTO pokedex VALUES(24, 'Arbok', '24.gif', '24.gif', 'cries_pokemon_legacy_24.ogg', NULL, 'veneno', NULL);
-INSERT INTO pokedex VALUES(25, 'Pikachu', '25.gif', '25.gif', 'cries_pokemon_legacy_25.ogg', 36, 'eléctrico', NULL);
-INSERT INTO pokedex VALUES(26, 'Raichu', '26.gif', '26.gif', 'cries_pokemon_legacy_26.ogg', NULL, 'eléctrico', NULL);
+INSERT INTO pokedex VALUES(25, 'Pikachu', '25.gif', '25.gif', 'cries_pokemon_legacy_25.ogg', 36, 'electrico', NULL);
+INSERT INTO pokedex VALUES(26, 'Raichu', '26.gif', '26.gif', 'cries_pokemon_legacy_26.ogg', NULL, 'electrico', NULL);
 INSERT INTO pokedex VALUES(27, 'Sandshrew', '27.gif', '27.gif', 'cries_pokemon_legacy_27.ogg', 22, 'tierra', NULL);
 INSERT INTO pokedex VALUES(28, 'Sandslash', '28.gif', '28.gif', 'cries_pokemon_legacy_28.ogg', NULL, 'tierra', NULL);
 INSERT INTO pokedex VALUES(29, 'Nidoran♀', '29.gif', '29.gif', 'cries_pokemon_legacy_29.ogg', 16, 'veneno', NULL);
@@ -133,9 +134,9 @@ INSERT INTO pokedex VALUES(59, 'Arcanine', '59.gif', '59.gif', 'cries_pokemon_le
 INSERT INTO pokedex VALUES(60, 'Poliwag', '60.gif', '60.gif', 'cries_pokemon_legacy_60.ogg', 25, 'agua', NULL);
 INSERT INTO pokedex VALUES(61, 'Poliwhirl', '61.gif', '61.gif', 'cries_pokemon_legacy_61.ogg', 36, 'agua', NULL);
 INSERT INTO pokedex VALUES(62, 'Poliwrath', '62.gif', '62.gif', 'cries_pokemon_legacy_62.ogg', NULL, 'agua', 'lucha');
-INSERT INTO pokedex VALUES(63, 'Abra', '63.gif', '63.gif', 'cries_pokemon_legacy_63.ogg', 16, 'psíquico', NULL);
-INSERT INTO pokedex VALUES(64, 'Kadabra', '64.gif', '64.gif', 'cries_pokemon_legacy_64.ogg', 38, 'psíquico', NULL);
-INSERT INTO pokedex VALUES(65, 'Alakazam', '65.gif', '65.gif', 'cries_pokemon_legacy_65.ogg', NULL, 'psíquico', NULL);
+INSERT INTO pokedex VALUES(63, 'Abra', '63.gif', '63.gif', 'cries_pokemon_legacy_63.ogg', 16, 'psiquico', NULL);
+INSERT INTO pokedex VALUES(64, 'Kadabra', '64.gif', '64.gif', 'cries_pokemon_legacy_64.ogg', 38, 'psiquico', NULL);
+INSERT INTO pokedex VALUES(65, 'Alakazam', '65.gif', '65.gif', 'cries_pokemon_legacy_65.ogg', NULL, 'psiquico', NULL);
 INSERT INTO pokedex VALUES(66, 'Machop', '66.gif', '66.gif', 'cries_pokemon_legacy_66.ogg', 28, 'lucha', NULL);
 INSERT INTO pokedex VALUES(67, 'Machoke', '67.gif', '67.gif', 'cries_pokemon_legacy_67.ogg', 38, 'lucha', NULL);
 INSERT INTO pokedex VALUES(68, 'Machamp', '68.gif', '68.gif', 'cries_pokemon_legacy_68.ogg', NULL, 'lucha', NULL);
@@ -285,17 +286,15 @@ ALTER TABLE mochila
 	ADD CONSTRAINT mochila_FK_id_objeto FOREIGN KEY (id_objeto) REFERENCES objeto(id_objeto)
 ;
 
-/* por incluir
 ALTER TABLE pokedex
-	ADD CONSTRAINT tipo1_ch CHECK()
+	ADD CONSTRAINT tipo1_ch CHECK(tipo1 IN('acero', 'agua', 'bicho', 'dragon', 'electrico', 'fantasma', 'fuego', 'hada', 'hielo', 'lucha', 'normal', 'planta', 'psiquico', 'roca', 'siniestro', 'tierra', 'veneno', 'volador'))
 ;
-*/
 
-/* por incluir
+
+
 ALTER TABLE pokedex
-	ADD CONSTRAINT tipo2_ch CHECK()
+	ADD CONSTRAINT tipo2_ch CHECK(tipo2 IN('acero', 'agua', 'bicho', 'dragon', 'electrico', 'fantasma', 'fuego', 'hada', 'hielo', 'lucha', 'normal', 'planta', 'psiquico', 'roca', 'siniestro', 'tierra', 'veneno', 'volador'))
 ;
-*/
 
 ALTER TABLE pokemon
 	ADD CONSTRAINT pokemon_FK_id_entrenador FOREIGN KEY (id_entrenador) REFERENCES entrenador(id_entrenador)
@@ -305,28 +304,27 @@ ALTER TABLE pokemon
 	ADD CONSTRAINT pokemon_FK_num_pokedex FOREIGN KEY (num_pokedex) REFERENCES pokedex(num_pokedex)
 ;
 
-/* por incluir
+
 ALTER TABLE pokemon
-	ADD CONSTRAINT estado_ch CHECK()
+	ADD CONSTRAINT estado_ch CHECK(estado IN('paralizado', 'quemado', 'envenenado', 'gravemente envenenado', 'dormido', 'congelado', 'pokérus', 'confuso', 'enamorado', 'drenado', 'maldito', 'canto mortal', 'atrapado', 'debilitado'))
 ;
-*/
 
 INSERT INTO entrenador (id_entrenador, usuario, pass, pokedolares)
 VALUES (1, 'Antonio', '123456', 17260);
 
-INSERT INTO pokemon VALUES (1, 1, 25, 'Pika', 35, 55, 40, 50, 50, 90, 20, 5, 'H', NULL, 1);
-INSERT INTO pokemon VALUES (2, 1, 7, 'Tortuguita', 44, 48, 65, 50, 64, 43, 18, 5, 'M', NULL, 2);
-INSERT INTO pokemon VALUES (3, 1, 16, 'Pidge', 40, 45, 40, 35, 35, 56, 15, 5, 'H', NULL, 3);
-INSERT INTO pokemon VALUES (4, 1, 129, 'Magik', 20, 10, 55, 15, 20, 80, 10, 5, 'X', NULL, NULL);
-INSERT INTO pokemon VALUES (5, 1, 43, 'Oddie', 45, 50, 55, 75, 65, 30, 12, 5, 'M', NULL, NULL);
-INSERT INTO pokemon VALUES (6, 1, 52, 'Meow', 40, 45, 35, 40, 40, 90, 16, 5, 'H', NULL, NULL);
+INSERT INTO pokemon VALUES (1, 1, 25, 'Pika', 35, 35, 55, 40, 50, 50, 90, 20, 5, 'H', NULL, 1);
+INSERT INTO pokemon VALUES (2, 1, 7, 'Tortuguita', 44, 44, 48, 65, 50, 64, 43, 18, 5, 'M', NULL, 2);
+INSERT INTO pokemon VALUES (3, 1, 16, 'Pidge', 40, 20, 45, 40, 35, 35, 56, 15, 5, 'H', NULL, 3);
+INSERT INTO pokemon VALUES (4, 1, 129, 'Magik', 20, 20, 10, 55, 15, 20, 80, 10, 5, 'X', NULL, NULL);
+INSERT INTO pokemon VALUES (5, 1, 43, 'Oddie', 45, 45, 50, 55, 75, 65, 30, 12, 5, 'M', NULL, NULL);
+INSERT INTO pokemon VALUES (6, 1, 52, 'Meow', 40, 40, 45, 35, 40, 40, 90, 16, 5, 'H', NULL, NULL);
 
 INSERT INTO entrenador (id_entrenador, usuario, pass, pokedolares)
 VALUES (2, 'Pedro', '123456', 1520);
 
-INSERT INTO pokemon VALUES (7, 2, 4, 'Charmy', 39, 52, 43, 60, 50, 65, 17, 5, 'H', NULL, 1);
-INSERT INTO pokemon VALUES (8, 2, 10, 'Cater', 45, 30, 35, 20, 20, 45, 8, 5, 'M', NULL, 2);
-INSERT INTO pokemon VALUES (9, 2, 19, 'Ratta', 30, 56, 35, 25, 35, 72, 14, 5, 'H', NULL, 3);
-INSERT INTO pokemon VALUES (10, 2, 27, 'Sandy', 50, 75, 85, 20, 30, 40, 19, 5, 'M', NULL, NULL);
-INSERT INTO pokemon VALUES (11, 2, 41, 'Zubat', 40, 45, 35, 30, 40, 55, 13, 5, 'X', NULL, NULL);
-INSERT INTO pokemon VALUES (12, 2, 63, 'Abra', 25, 20, 15, 105, 55, 90, 11, 5, 'H', NULL, NULL);
+INSERT INTO pokemon VALUES (7, 2, 4, 'Charmy', 39, 39, 52, 43, 60, 50, 65, 17, 5, 'H', NULL, 1);
+INSERT INTO pokemon VALUES (8, 2, 10, 'Cater', 45, 45, 30, 35, 20, 20, 45, 8, 5, 'M', NULL, 2);
+INSERT INTO pokemon VALUES (9, 2, 19, 'Ratta', 30, 30, 56, 35, 25, 35, 72, 14, 5, 'H', NULL, 3);
+INSERT INTO pokemon VALUES (10, 2, 27, 'Sandy', 50, 50, 75, 85, 20, 30, 40, 19, 5, 'M', NULL, NULL);
+INSERT INTO pokemon VALUES (11, 2, 41, 'Zubat', 40, 40, 45, 35, 30, 40, 55, 13, 5, 'X', NULL, NULL);
+INSERT INTO pokemon VALUES (12, 2, 63, 'Abra', 25, 25, 20, 15, 105, 55, 90, 11, 5, 'H', NULL, NULL);
