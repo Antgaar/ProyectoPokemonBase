@@ -333,3 +333,130 @@ INSERT INTO pokemon VALUES (10, 2, 27, 'Sandy', 50, 50, 75, 85, 20, 30, 40, 19, 
 INSERT INTO pokemon VALUES (11, 2, 41, 'Zubat', 40, 40, 45, 35, 30, 40, 55, 13, 5, 'X', NULL, NULL);
 INSERT INTO pokemon VALUES (12, 2, 63, 'Abra', 25, 25, 20, 15, 105, 55, 90, 11, 5, 'H', NULL, NULL);
 
+-- Tipo: agua
+INSERT INTO movimiento VALUES(3000, 'Restriccion', 'agua', 'estado', 1, 30, 100, NULL, 'atrapado', 2, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3001, 'Corriente', 'agua', 'estado', 10, 28, 95, NULL, 'paralizado', 3, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3002, 'Cuerpo liquido', 'agua', 'potenciacion', 20, 30, NULL, NULL, NULL, NULL, 'defensa', 2, 0);
+INSERT INTO movimiento VALUES(3003, 'Cuchillas de agua', 'agua', 'potenciacion', 30, 28, NULL, NULL, NULL, NULL, 'ataque', 3, 0);
+
+-- Tipo: bicho
+INSERT INTO movimiento VALUES(3004, 'Tecnica mosquito', 'bicho', 'estado', 1, 30, 100, NULL, 'confuso', 2, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3005, 'Polvo venenoso', 'bicho', 'estado', 10, 28, 95, NULL, 'envenenado', 3, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3006, 'Enjambre', 'bicho', 'potenciacion', 20, 30, NULL, NULL, NULL, NULL, 'evasion', 2, 0);
+INSERT INTO movimiento VALUES(3007, 'Polvo plata', 'bicho', 'potenciacion', 30, 28, 90, NULL, NULL, NULL, 'precision', -2, 1);
+
+-- Tipo: dragon
+INSERT INTO movimiento VALUES(3008, 'Grito aniquilador', 'dragon', 'estado', 1, 30, 10, NULL, 'devilitado', 2, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3009, 'Avaricia', 'dragon', 'estado', 10, 28, 95, NULL, 'maldito', 3, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3010, 'Fuerza dragon', 'dragon', 'potenciacion', 20, 30, NULL, NULL, NULL, NULL, 'ataque_es', 2, 0);
+INSERT INTO movimiento VALUES(3011, 'Escamas magicas', 'dragon', 'potenciacion', 30, 28, NULL, NULL, NULL, NULL, 'defensa_es', 3, 0);
+
+-- Tipo: electrico
+INSERT INTO movimiento VALUES(3012, 'Onda trueno', 'electrico', 'estado', 1, 30, 100, NULL, 'paralizado', 2, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3013, 'Electroshock', 'electrico', 'estado', 10, 28, 95, NULL, 'somnolento', 3, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3014, 'Aceleracion', 'electrico', 'potenciacion', 20, 30, NULL, NULL, NULL, NULL, 'velocidad', 2, 0);
+INSERT INTO movimiento VALUES(3015, 'Carga', 'electrico', 'potenciacion', 30, 28, NULL, NULL, NULL, NULL, 'ataque_es', 3, 0);
+
+-- Tipo: fantasma
+INSERT INTO movimiento VALUES(3016, 'Posesion', 'fantasma', 'estado', 1, 30, 100, NULL, 'enamorado', 2, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3017, 'Truco', 'fantasma', 'estado', 10, 28, 95, NULL, 'confuso', 3, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3018, 'Cuerpo espectral', 'fantasma', 'potenciacion', 20, 30, NULL, NULL, NULL, NULL, 'defensa', 2, 0);
+INSERT INTO movimiento VALUES(3019, 'Desaparicion', 'fantasma', 'potenciacion', 30, 28, NULL, NULL, NULL, NULL, 'evasion', 3, 0);
+
+-- Tipo: fuego
+INSERT INTO movimiento VALUES(3020, 'Fuego fatuo', 'fuego', 'estado', 1, 30, 100, NULL, 'quemado', 2, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3021, 'Circulo de fuego', 'fuego', 'estado', 10, 28, 95, NULL, 'paralizado', 3, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3022, 'Armamento ignio', 'fuego', 'potenciacion', 20, 30, NULL, NULL, NULL, NULL, 'ataque', 2, 0);
+INSERT INTO movimiento VALUES(3023, 'Avivar', 'fuego', 'potenciacion', 30, 28, NULL, NULL, NULL, NULL, 'ataque_es', 3, 0);
+
+-- Tipo: hielo
+INSERT INTO movimiento VALUES(3024, 'Bola de nieve', 'hielo', 'estado', 1, 30, 100, NULL, 'helado', 3, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3025, 'Glaciar', 'hielo', 'estado', 10, 28, 95, NULL, 'congelado', 2, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3026, 'Hielo grueso', 'hielo', 'potenciacion', 20, 30, NULL, NULL, NULL, NULL, 'defensa', 2, 0);
+INSERT INTO movimiento VALUES(3027, 'Patinaje sobre hielo', 'hielo', 'potenciacion', 30, 28, NULL, NULL, NULL, NULL, 'evasion', 3, 0);
+
+-- Tipo: lucha
+INSERT INTO movimiento VALUES(3028, 'Opreson', 'lucha', 'estado', 1, 30, 100, NULL, 'atrapado', 2, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3029, 'Rompe-espaldas', 'lucha', 'estado', 10, 28, 95, NULL, 'maldito', 3, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3030, 'Triceps', 'lucha', 'potenciacion', 20, 30, NULL, NULL, NULL, NULL, 'ataque', 2, 0);
+INSERT INTO movimiento VALUES(3031, 'Fuerza pectoral', 'lucha', 'potenciacion', 30, 28, NULL, NULL, NULL, NULL, 'defensa', 3, 0);
+
+-- Tipo: planta
+INSERT INTO movimiento VALUES(3032, 'Drenadoras', 'planta', 'estado', 1, 30, 100, NULL, 'drenadoras', 2, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3033, 'Polen toxico', 'planta', 'estado', 10, 28, 95, NULL, 'veneno', 3, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3034, 'Fotosintesis', 'planta', 'potenciacion', 20, 30, NULL, NULL, NULL, NULL, 'vitalidad', 2, 0);
+INSERT INTO movimiento VALUES(3035, 'Raizes duras', 'planta', 'potenciacion', 30, 28, NULL, NULL, NULL, NULL, 'defensa', 3, 0);
+
+-- Tipo: psiquico
+INSERT INTO movimiento VALUES(3036, 'Himnosis', 'psiquico', 'estado', 1, 30, 100, NULL, 'dormido', 2, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3037, 'Espejismos', 'psiquico', 'estado', 10, 28, 95, NULL, 'confuso', 3, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3038, 'Concentracion', 'psiquico', 'potenciacion', 20, 30, NULL, NULL, NULL, NULL, 'ataque_es', 2, 0);
+INSERT INTO movimiento VALUES(3039, 'Reflejo', 'psiquico', 'potenciacion', 30, 28, NULL, NULL, NULL, NULL, 'defensa_es', 3, 0);
+
+-- Tipo: tierra
+INSERT INTO movimiento VALUES(3040, 'Pies en la tierra', 'tierra', 'estado', 1, 30, 100, NULL, 'atrapado', 2, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3041, 'Arenas movedizas', 'tierra', 'estado', 10, 28, 95, NULL, 'maldito', 3, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3042, 'Pared de tierra', 'tierra', 'potenciacion', 20, 30, NULL, NULL, NULL, NULL, 'defensa', 2, 0);
+INSERT INTO movimiento VALUES(3043, 'Reconstruccion', 'tierra', 'potenciacion', 30, 28, NULL, NULL, NULL, NULL, 'vitalidad', 3, 0);
+
+-- Tipo: volador
+INSERT INTO movimiento VALUES(3044, 'Graznido encantador', 'volador', 'estado', 1, 30, 100, NULL, 'enamorado', 2, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3045, 'Vuelo erratico', 'volador', 'estado', 10, 28, 95, NULL, 'confuso', 3, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3046, 'Caida en picado', 'volador', 'potenciacion', 20, 30, NULL, NULL, NULL, NULL, 'velocidad', 2, 0);
+INSERT INTO movimiento VALUES(3047, 'Mirada de aguila', 'volador', 'potenciacion', 30, 28, NULL, NULL, NULL, NULL, 'precision', 3, 0);
+
+-- Tipo: roca
+INSERT INTO movimiento VALUES(3048, 'Agujero inexpugnable', 'roca', 'estado', 1, 30, 100, NULL, 'atrapado', 2, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3049, 'Abalancha', 'roca', 'estado', 10, 28, 95, NULL, 'maldito', 3, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3050, 'Muro de rocas', 'roca', 'potenciacion', 20, 30, NULL, NULL, NULL, NULL, 'defensa', 3, 0);
+INSERT INTO movimiento VALUES(3051, 'Copresion', 'roca', 'potenciacion', 30, 28, NULL, NULL, NULL, NULL, 'ataque', 2, 0);
+
+-- Tipo: veneno
+INSERT INTO movimiento VALUES(3052, 'Veneno', 'veneno', 'estado', 1, 30, 100, NULL, 'envenenado', 2, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3053, 'Toxico', 'veneno', 'estado', 10, 28, 95, NULL, 'gravemente envenenado', 3, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3054, 'Toxicidad', 'veneno', 'potenciacion', 20, 30, NULL, NULL, NULL, NULL, 'ataque_es', 2, 0);
+INSERT INTO movimiento VALUES(3055, 'Armadura azida', 'veneno', 'potenciacion', 30, 28, NULL, NULL, NULL, NULL, 'defensa_es', 3, 0);
+
+-- Movimientos de estado (normal)
+INSERT INTO movimiento VALUES(3056, 'Red', 'normal', 'estado', 1, 30, 100, NULL, 'paralizado', 1, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3058, 'Antorcha', 'normal', 'estado', 10, 28, 95, NULL, 'quemado', 1, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3060, 'Punzon', 'normal', 'estado', 15, 26, 90, NULL, 'envenenado', 1, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3062, 'Dardo somnifero', 'normal', 'estado', 20, 24, 85, NULL, 'dormido', 1, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3064, 'Nieve en polvo', 'normal', 'estado', 25, 22, 80, NULL, 'congelado', 1, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3066, 'Puntero laser', 'normal', 'estado', 30, 20, 75, NULL, 'confuso', 1, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3068, 'Seducir', 'normal', 'estado', 35, 18, 70, NULL, 'enamorado', 1, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3070, 'Interponerse', 'normal', 'estado', 40, 16, 65, NULL, 'atrapado', 3, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3072, 'Sello maldito', 'normal', 'estado', 45, 14, 60, NULL, 'maldito', 1, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3074, 'Descanso', 'normal', 'estado', 50, 12, 55, NULL, 'NULL', 0, NULL, NULL, 1);
+
+-- Movimientos de potenciación (normal)
+INSERT INTO movimiento VALUES(3057, 'Intimidar', 'normal', 'potenciacion', 5, 30, 100, NULL, NULL, NULL, 'ataque', -2, 1);
+INSERT INTO movimiento VALUES(3059, 'Finta', 'normal', 'potenciacion', 12, 28, 95, NULL, NULL, NULL, 'defensa', -1, 1);
+INSERT INTO movimiento VALUES(3061, 'Atormentar', 'normal', 'potenciacion', 18, 26, 90, NULL, NULL, NULL, 'ataque_es', -2, 1);
+INSERT INTO movimiento VALUES(3063, 'Asustar', 'normal', 'potenciacion', 24, 24, 85, NULL, NULL, NULL, 'defensa_es', -3, 1);
+INSERT INTO movimiento VALUES(3065, 'Inmovolizar', 'normal', 'potenciacion', 30, 22, 80, NULL, NULL, NULL, 'velocidad', -2, 1);
+INSERT INTO movimiento VALUES(3067, 'Guantazo aturdidor', 'normal', 'potenciacion', 36, 20, 75, NULL, NULL, NULL, 'precision', -1, 1);
+INSERT INTO movimiento VALUES(3069, 'Marca', 'normal', 'potenciacion', 42, 18, 70, NULL, NULL, NULL, 'evasion', -2, 1);
+INSERT INTO movimiento VALUES(3071, 'Recuperacion', 'normal', 'potenciacion', 48, 16, 65, NULL, NULL, NULL, 'vitalidad', 2, 0);
+INSERT INTO movimiento VALUES(3073, 'Primeros auxilios', 'normal', 'potenciacion', 54, 14, 60, NULL, NULL, NULL, 'vitalidad', 1, 1);
+
+-- Tipo: agua
+INSERT INTO movimiento VALUES(2000, 'salpicar''burbuja', 'agua', 'ataque', 1, 50, 100, 5, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2001, 'cascada', 'agua', 'ataque', 5, 45, 95, 25, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2002, 'rayo burbuja', 'agua', 'ataque', 10, 40, 90, 50, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2003, 'surf', 'agua', 'ataque', 15, 35, 85, 75, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2004, 'pistola agua', 'agua', 'ataque', 20, 30, 80, 100, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2005, 'torbellino', 'agua', 'ataque', 25, 25, 75, 125, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2006, 'hidrobomba', 'agua', 'ataque', 30, 20, 70, 150, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2007, 'hidrocanon', 'agua', 'ataque', 35, 15, 65, 175, NULL, NULL, NULL, NULL, 1);
+
+-- Tipo: bicho
+INSERT INTO movimiento VALUES(2008, 'Picadura', 'bicho', 'ataque', 1, 50, 100, 5, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2009, 'Pin misil', 'bicho', 'ataque', 5, 45, 95, 25, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2010, 'Aguijon letal', 'bicho', 'ataque', 10, 40, 90, 50, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2011, 'Cornamenta', 'bicho', 'ataque', 15, 35, 85, 75, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2012, 'Parasito', 'bicho', 'ataque', 20, 30, 80, 100, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2013, 'Escaramuza', 'bicho', 'ataque', 25, 25, 75, 125, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2014, 'Tijera X', 'bicho', 'ataque', 30, 20, 70, 150, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2015, 'Megacuerno', 'bicho', 'ataque', 35, 15, 65, 175, NULL, NULL, NULL, NULL, 1);
+
