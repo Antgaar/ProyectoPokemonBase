@@ -1,28 +1,28 @@
 CREATE TABLE objeto(
 	id_objeto INTEGER,
 	nom_objeto VARCHAR(50),
-	ataque INTEGER,
-	at_especial INTEGER,
-	defensa INTEGER,
-	def_especial INTEGER,
-	velocidad INTEGER,
+	ataque NUMBER(3,1),
+	at_especial NUMBER(3,1),
+	defensa NUMBER(2,1),
+	def_especial NUMBER(2,1),
+	velocidad NUMBER(2,1),
 	precio INTEGER
 );
 
 CREATE TABLE movimiento (
-    id_movimiento INTEGER,
-    nom_movimiento VARCHAR(20) CONSTRAINT nom_movimiento_NN NOT NULL,
-    tipo VARCHAR(20),
-    clase VARCHAR(20),
-    nivel_aprendizaje INTEGER CONSTRAINT nivel_aprendizaje_NN NOT NULL,
-    pp_max NUMBER(2),
-    precision_movimiento NUMBER(3),
-    potencia INTEGER,
-    estado VARCHAR(20),
-    turnos INTEGER,
-    mejora VARCHAR(20),
-    nivel_de_mejora NUMBER(1),
-    objetivo_oponente NUMBER(1)
+	id_movimiento INTEGER,
+	nom_movimiento VARCHAR(20) CONSTRAINT nom_movimiento_NN NOT NULL,
+	tipo VARCHAR(20),
+	clase VARCHAR(20),
+	nivel_aprendizaje INTEGER CONSTRAINT nivel_aprendizaje_NN NOT NULL,
+	pp_max NUMBER(2),
+	precision_movimiento NUMBER(3),
+	potencia INTEGER,
+	estado VARCHAR(20),
+	turnos INTEGER,
+	mejora VARCHAR(20),
+	nivel_de_mejora NUMBER(1),
+	objetivo_oponente NUMBER(1)
 );
 
 
@@ -486,8 +486,12 @@ INSERT INTO movimiento VALUES(2117, 'residuos', 'veneno', 'ataque', 25, 25, 75, 
 INSERT INTO movimiento VALUES(2118, 'gas venenoso', 'veneno', 'ataque', 30, 20, 70, 150, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2119, 'toxico', 'veneno', 'ataque', 35, 15, 65, 175, NULL, NULL, NULL, NULL, 1);
 
-
-
+INSERT INTO objeto VALUES (1, 'Pesa', 1.2, NULL, 1.2, NULL, 0.8, 2000);
+INSERT INTO objeto VALUES (2, 'Pluma', NULL, NULL, 0.8, 0.8, 1.3, 2000);
+INSERT INTO objeto VALUES (3, 'Chaleco', 0.85, NULL, 1.2, 1.2, 0.85, 2000);
+INSERT INTO objeto VALUES (4, 'Eter', NULL, NULL, NULL, NULL, NULL, 200);
+INSERT INTO objeto VALUES (5, 'Anillo único', 10, 10, -1, -1, NULL, 2000000000);
+INSERT INTO objeto VALUES (6, 'Pokéball', NULL, NULL, NULL, NULL, NULL, 50);
 
 ALTER TABLE objeto
 	ADD CONSTRAINT objeto_PK_id_objeto PRIMARY KEY (id_objeto)
