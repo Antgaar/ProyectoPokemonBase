@@ -105,10 +105,10 @@ INSERT INTO pokedex VALUES(25, 'Pikachu', '25.gif', '25.gif', 'cries_pokemon_leg
 INSERT INTO pokedex VALUES(26, 'Raichu', '26.gif', '26.gif', 'cries_pokemon_legacy_26.ogg', NULL, 'electrico', NULL);
 INSERT INTO pokedex VALUES(27, 'Sandshrew', '27.gif', '27.gif', 'cries_pokemon_legacy_27.ogg', 22, 'tierra', NULL);
 INSERT INTO pokedex VALUES(28, 'Sandslash', '28.gif', '28.gif', 'cries_pokemon_legacy_28.ogg', NULL, 'tierra', NULL);
-INSERT INTO pokedex VALUES(29, 'Nidoran♀', '29.gif', '29.gif', 'cries_pokemon_legacy_29.ogg', 16, 'veneno', NULL);
+INSERT INTO pokedex VALUES(29, 'Nidoran_H', '29.gif', '29.gif', 'cries_pokemon_legacy_29.ogg', 16, 'veneno', NULL);
 INSERT INTO pokedex VALUES(30, 'Nidorina', '30.gif', '30.gif', 'cries_pokemon_legacy_30.ogg', 36, 'veneno', NULL);
 INSERT INTO pokedex VALUES(31, 'Nidoqueen', '31.gif', '31.gif', 'cries_pokemon_legacy_31.ogg', NULL, 'veneno', 'tierra');
-INSERT INTO pokedex VALUES(32, 'Nidoran♂', '32.gif', '32.gif', 'cries_pokemon_legacy_32.ogg', 16, 'veneno', NULL);
+INSERT INTO pokedex VALUES(32, 'Nidoran_M', '32.gif', '32.gif', 'cries_pokemon_legacy_32.ogg', 16, 'veneno', NULL);
 INSERT INTO pokedex VALUES(33, 'Nidorino', '33.gif', '33.gif', 'cries_pokemon_legacy_33.ogg', 36, 'veneno', NULL);
 INSERT INTO pokedex VALUES(34, 'Nidoking', '34.gif', '34.gif', 'cries_pokemon_legacy_34.ogg', NULL, 'veneno', 'tierra');
 INSERT INTO pokedex VALUES(35, 'Clefairy', '35.gif', '35.gif', 'cries_pokemon_legacy_35.ogg', 36, 'normal', NULL);
@@ -310,7 +310,7 @@ INSERT INTO movimiento VALUES(3051, 'Copresion', 'roca', 'potenciacion', 30, 28,
 
 -- Tipo especial: veneno
 INSERT INTO movimiento VALUES(3052, 'Veneno', 'veneno', 'estado', 1, 30, 100, NULL, 'envenenado', 2, NULL, NULL, 1);
-INSERT INTO movimiento VALUES(3053, 'Toxico', 'veneno', 'estado', 10, 28, 95, NULL, 'toxico', 3, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(3053, 'Toxico', 'veneno', 'estado', 10, 28, 95, NULL, 'intoxicado', 3, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(3054, 'Toxicidad', 'veneno', 'potenciacion', 20, 30, NULL, NULL, NULL, NULL, 'ataque_es', 2, 0);
 INSERT INTO movimiento VALUES(3055, 'Armadura azida', 'veneno', 'potenciacion', 30, 28, NULL, NULL, NULL, NULL, 'defensa_es', 3, 0);
 
@@ -326,7 +326,7 @@ INSERT INTO movimiento VALUES(3070, 'Interponerse', 'normal', 'estado', 40, 16, 
 INSERT INTO movimiento VALUES(3072, 'Sello maldito', 'normal', 'estado', 45, 14, 60, NULL, 'maldito', 1, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(3074, 'Descanso', 'normal', 'estado', 50, 12, 55, NULL, 'NULL', 0, NULL, NULL, 1);
 
--- Movimientos de potenciación (normal)
+-- Movimientos de potenciacion (normal)
 INSERT INTO movimiento VALUES(3057, 'Intimidar', 'normal', 'potenciacion', 5, 30, 100, NULL, NULL, NULL, 'ataque', -2, 1);
 INSERT INTO movimiento VALUES(3059, 'Finta', 'normal', 'potenciacion', 12, 28, 95, NULL, NULL, NULL, 'defensa', -1, 1);
 INSERT INTO movimiento VALUES(3061, 'Atormentar', 'normal', 'potenciacion', 18, 26, 90, NULL, NULL, NULL, 'ataque_es', -2, 1);
@@ -374,7 +374,7 @@ INSERT INTO movimiento VALUES(2025,'placaje electrico', 'electrico', 'ataque', 5
 INSERT INTO movimiento VALUES(2026,'chispa', 'electrico', 'ataque', 10, 40, 90, 50, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2027,'electrocanon', 'electrico', 'ataque', 15, 35, 85, 75, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2028,'impactrueno', 'electrico', 'ataque', 20, 30, 80, 100, NULL, NULL, NULL, NULL, 1);
-INSERT INTO movimiento VALUES(2029,'puño trueno', 'electrico', 'ataque', 25, 25, 75, 125, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2029,'punyo trueno', 'electrico', 'ataque', 25, 25, 75, 125, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2030,'rayo', 'electrico', 'ataque', 30, 20, 70, 150, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2031,'trueno', 'electrico', 'ataque', 35, 15, 65, 175, NULL, NULL, NULL, NULL, 1);
 
@@ -385,7 +385,7 @@ INSERT INTO movimiento VALUES(2034, 'mismo destino', 'fantasma', 'ataque', 10, 4
 INSERT INTO movimiento VALUES(2035, 'pesadilla', 'fantasma', 'ataque', 15, 35, 85, 75, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2036, 'rencor', 'fantasma', 'ataque', 20, 30, 80, 100, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2037, 'rayo confuso', 'fantasma', 'ataque', 25, 25, 75, 125, NULL, NULL, NULL, NULL, 1);
-INSERT INTO movimiento VALUES(2038, 'puño sombra', 'fantasma', 'ataque', 30, 20, 70, 150, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2038, 'punyo sombra', 'fantasma', 'ataque', 30, 20, 70, 150, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2039, 'bola sombra', 'fantasma', 'ataque', 35, 15, 65, 175, NULL, NULL, NULL, NULL, 1);
 
 -- Tipo: fuego
@@ -400,7 +400,7 @@ INSERT INTO movimiento VALUES(2047, 'llamarada', 'fuego', 'ataque', 35, 15, 65, 
 
 -- Tipo: hielo
 INSERT INTO movimiento VALUES(2048, 'carambono', 'hielo', 'ataque', 1, 50, 100, 5, NULL, NULL, NULL, NULL, 1);
-INSERT INTO movimiento VALUES(2049, 'puño hielo', 'hielo', 'ataque', 5, 45, 95, 25, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2049, 'punyo hielo', 'hielo', 'ataque', 5, 45, 95, 25, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2050, 'rayo hielo', 'hielo', 'ataque', 10, 40, 90, 50, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2051, 'viento hielo', 'hielo', 'ataque', 15, 35, 85, 75, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2052, 'bola hielo', 'hielo', 'ataque', 20, 30, 80, 100, NULL, NULL, NULL, NULL, 1);
@@ -409,14 +409,14 @@ INSERT INTO movimiento VALUES(2054, 'frio polar', 'hielo', 'ataque', 30, 20, 70,
 INSERT INTO movimiento VALUES(2055, 'ventisca', 'hielo', 'ataque', 35, 15, 65, 175, NULL, NULL, NULL, NULL, 1);
 
 -- Tipo: lucha
-INSERT INTO movimiento VALUES(2056, 'puño dinamico', 'lucha', 'ataque', 1, 50, 100, 5, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2056, 'punyo dinamico', 'lucha', 'ataque', 1, 50, 100, 5, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2057, 'patada giro', 'lucha', 'ataque', 5, 45, 95, 25, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2058, 'doble patada', 'lucha', 'ataque', 10, 40, 90, 50, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2059, 'golpe karate', 'lucha', 'ataque', 15, 35, 85, 75, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2060, 'patada salto', 'lucha', 'ataque', 20, 30, 80, 100, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2061, 'sumision', 'lucha', 'ataque', 25, 25, 75, 125, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2062, 'contraataque', 'lucha', 'ataque', 30, 20, 70, 150, NULL, NULL, NULL, NULL, 1);
-INSERT INTO movimiento VALUES(2063, 'ultrapuño', 'lucha', 'ataque', 35, 15, 65, 175, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2063, 'ultrapunyo', 'lucha', 'ataque', 35, 15, 65, 175, NULL, NULL, NULL, NULL, 1);
 
 -- Tipo: normal
 INSERT INTO movimiento VALUES(2064, 'ataque rapido', 'normal', 'ataque', 1, 50, 100, 5, NULL, NULL, NULL, NULL, 1);
@@ -425,7 +425,7 @@ INSERT INTO movimiento VALUES(2066, 'placaje', 'normal', 'ataque', 10, 40, 90, 5
 INSERT INTO movimiento VALUES(2067, 'doble filo', 'normal', 'ataque', 15, 35, 85, 75, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2068, 'ataque furia', 'normal', 'ataque', 20, 30, 80, 100, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2069, 'hiperrayo', 'normal', 'ataque', 25, 25, 75, 125, NULL, NULL, NULL, NULL, 1);
-INSERT INTO movimiento VALUES(2070, 'megapuño', 'normal', 'ataque', 30, 20, 70, 150, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2070, 'megapunyo', 'normal', 'ataque', 30, 20, 70, 150, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2071, 'explosion', 'normal', 'ataque', 35, 15, 65, 175, NULL, NULL, NULL, NULL, 1);
 
 -- Tipo: planta
@@ -445,7 +445,7 @@ INSERT INTO movimiento VALUES(2082, 'psiquico', 'psiquico', 'ataque', 10, 40, 90
 INSERT INTO movimiento VALUES(2083, 'psicoataque', 'psiquico', 'ataque', 15, 35, 85, 75, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2084, 'premonicion', 'psiquico', 'ataque', 20, 30, 80, 100, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2085, 'psicorrayo', 'psiquico', 'ataque', 25, 25, 75, 125, NULL, NULL, NULL, NULL, 1);
-INSERT INTO movimiento VALUES(2086, 'comesueños', 'psiquico', 'ataque', 30, 20, 70, 150, NULL, NULL, NULL, NULL, 1);
+INSERT INTO movimiento VALUES(2086, 'comesuenyos', 'psiquico', 'ataque', 30, 20, 70, 150, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2087, 'resplandor', 'psiquico', 'ataque', 35, 15, 65, 175, NULL, NULL, NULL, NULL, 1);
 
 -- Tipo: tierra
@@ -488,12 +488,13 @@ INSERT INTO movimiento VALUES(2117, 'residuos', 'veneno', 'ataque', 25, 25, 75, 
 INSERT INTO movimiento VALUES(2118, 'gas venenoso', 'veneno', 'ataque', 30, 20, 70, 150, NULL, NULL, NULL, NULL, 1);
 INSERT INTO movimiento VALUES(2119, 'toxico', 'veneno', 'ataque', 35, 15, 65, 175, NULL, NULL, NULL, NULL, 1);
 
+-- Insertado Objetos
 INSERT INTO objeto VALUES (1, 'Pesa', 1.2, NULL, 1.2, NULL, 0.8, 2000);
 INSERT INTO objeto VALUES (2, 'Pluma', NULL, NULL, 0.8, 0.8, 1.3, 2000);
 INSERT INTO objeto VALUES (3, 'Chaleco', 0.85, NULL, 1.2, 1.2, 0.85, 2000);
 INSERT INTO objeto VALUES (4, 'Eter', NULL, NULL, NULL, NULL, NULL, 200);
-INSERT INTO objeto VALUES (5, 'Anillo único', 10, 10, -1, -1, NULL, 2000000000);
-INSERT INTO objeto VALUES (6, 'Pokéball', NULL, NULL, NULL, NULL, NULL, 50);
+INSERT INTO objeto VALUES (5, 'Anillo unico', 10, 10, -1, -1, NULL, 2000000000);
+INSERT INTO objeto VALUES (6, 'Pokeball', NULL, NULL, NULL, NULL, NULL, 50);
 
 
 -- Insertando las constraints
@@ -544,7 +545,7 @@ ALTER TABLE pokemon
 ;
 
 ALTER TABLE pokemon
-	ADD CONSTRAINT estado_ch CHECK(estado IN('paralizado', 'quemado', 'envenenado', 'gravemente envenenado', 'dormido', 'congelado', 'pokérus', 'confuso', 'enamorado', 'drenado', 'maldito', 'canto mortal', 'atrapado', 'debilitado'))
+	ADD CONSTRAINT estado_ch CHECK(estado IN('paralizado', 'quemado', 'envenenado', 'intoxicado', 'dormido', 'congelado', 'pokerus', 'confuso', 'enamorado', 'drenado', 'maldito', 'canto mortal', 'atrapado', 'debilitado'))
 ;
 
 -- Constraints de la tabla entrenador
