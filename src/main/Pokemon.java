@@ -253,7 +253,17 @@ public class Pokemon {
 	
 	
 	
-	protected void suvirDeNievel(Pokemon poke) {
+	protected void suvirDeNivel(Pokemon poke) {
 		Random rand = new Random();
+		poke.setNivel((byte) (poke.getNivel() + 1));
+		poke.setAtaque((poke.getAtaque() + 1 + rand.nextInt(5)));
+		poke.setAtaqueEspecial((poke.getAtaqueEspecial() + 1 + rand.nextInt(5)));
+		poke.setDefensa((poke.getDefensa() + 1 + rand.nextInt(5)));
+		poke.setDefensaEspecial((poke.getDefensaEspecial() + 1 + rand.nextInt(5)));
+		byte recuperacion = (byte) (1 + rand.nextInt(5));
+		poke.setVitalidad((poke.getVitalidad() + recuperacion));
+		poke.setVitalidadRestante((poke.getVitalidadRestante() + recuperacion));
+		poke.setVelocidad((poke.getVelocidad() + 1 + rand.nextInt(5)));
 	}
+}
 }
