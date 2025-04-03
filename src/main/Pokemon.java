@@ -10,7 +10,7 @@ public class Pokemon {
 	 * Sexo solo podra ser H, M, X
 	 * Estado solo podra ser paralizado, quemado, envenenado, toxico, dormido, congelado, pokerus, confuso, enamorado, drenado, maldito, canto mortal, atrapado, debilitado
 	 * Si el mote es "" el pokemon respondera por el nombre de pokedex
-	 * 
+	 * Los pokemon en este contructor son considerados "pokemon activos", estos incluyen los pokemon del equipo 1, 2 y del oponente, en la pokedex se utilizan elementos LinkedList<Pokemon> temporales
 	 * 
 	 * 
 	 * 
@@ -30,7 +30,8 @@ public class Pokemon {
 	private String estado;
 	private byte itemEquipado;
 	
-	private Pokemon() {
+	//constructor prueva
+	public Pokemon() {
 		super();
 		this.mote = "";
 		this.numeroDePokedex = 1;
@@ -48,7 +49,27 @@ public class Pokemon {
 		this.itemEquipado = 1;
 	}
 
-	private Pokemon(String mote, int numeroDePokedex, int vitalidad, int vitalidadRestante, int ataque, int defensa,
+	//constructor captura
+	public Pokemon(String mote, int pokedex, char sexo) {
+		super();
+		this.mote = mote;
+		this.numeroDePokedex = pokedex;
+		this.vitalidad = 10;
+		this.vitalidadRestante = 10;
+		this.ataque = 10;
+		this.defensa = 10;
+		this.ataqueEspecial = 10;
+		this.defensaEspecial = 10;
+		this.velocidad = 10;
+		this.nivel = 10;
+		this.fertilidad = 5;
+		this.sexo = sexo;
+		this.estado = "NULL";
+		this.itemEquipado = 0;
+	}
+
+	//constructor descarga
+	public Pokemon(String mote, int numeroDePokedex, int vitalidad, int vitalidadRestante, int ataque, int defensa,
 			int ataqueEspecial, int defensaEspecial, int velocidad, byte nivel, byte fertilidad, char sexo,
 			String estado, byte itemEquipado) {
 		this.mote = mote;
@@ -67,7 +88,8 @@ public class Pokemon {
 		this.itemEquipado = itemEquipado;
 	}
 
-	private Pokemon(Pokemon p) {
+	//constructor copia
+	public Pokemon(Pokemon p) {
 		this.mote = p.mote;
 		this.numeroDePokedex = p.numeroDePokedex;
 		this.vitalidad = p.vitalidad;
@@ -253,7 +275,7 @@ public class Pokemon {
 	
 	
 	
-	protected void suvirDeNivel(Pokemon poke) {
+	public void suvirDeNivel(Pokemon poke) {
 		Random rand = new Random();
 		poke.setNivel((byte) (poke.getNivel() + 1));
 		poke.setAtaque((poke.getAtaque() + 1 + rand.nextInt(5)));
