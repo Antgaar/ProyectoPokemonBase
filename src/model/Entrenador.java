@@ -4,7 +4,7 @@ public class Entrenador {
 	private String usuario;
 	private String pass;
 	private int pokedolares;
-	
+
 	public Entrenador(String usuario, String pass, int pokedolares) {
 		super();
 		this.usuario = usuario;
@@ -40,10 +40,5 @@ public class Entrenador {
 	public String toString() {
 		return "Entrenador [usuario=" + usuario + ", pass=" + pass + ", pokedolares=" + pokedolares + "]";
 	}
-	
-	
-	
-	
-	
-	
+
 }
