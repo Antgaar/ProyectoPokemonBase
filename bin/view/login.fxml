@@ -32,34 +32,140 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="358.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
       <children>
-            <ImageView fitHeight="400.0" fitWidth="640.0">
+            <ImageView id="imgFondo" fx:id="imgFondo" fitHeight="415.0" fitWidth="640.0" pickOnBounds="true">
                <image>
-                  <Image url="@../../../../../Desktop/Captura%20de%20pantalla%202025-03-25%20133112.png" />
+                  <Image url="@../../img/ImagenesMenus/charizard-pokemon.1920x10801-ezgif.com-cut.gif" />
                </image>
             </ImageView>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1e1e1e" height="32.0" layoutX="231.0" layoutY="280.0" stroke="#ee1818" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
-            <ImageView fitHeight="219.0" fitWidth="427.0" layoutX="117.0" layoutY="-29.0">
+            <Group id="imgLogo" layoutX="16.0" layoutY="12.0">
+               <children>
+                  <ImageView id="oneTitleLeter" fx:id="oneTitleLeter" fitHeight="70.0" fitWidth="62.0" layoutY="2.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/ImagenesMenus/LetrasPokemon/d3b71274b8ab5433a7b58b1abed6b8ea%20-%20copia%20(9).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="sevenTitleLeter" fx:id="sevenTitleLeter" fitHeight="70.0" fitWidth="106.0" layoutX="225.0" layoutY="2.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/ImagenesMenus/LetrasPokemon/d3b71274b8ab5433a7b58b1abed6b8ea%20-%20copia%20(7).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="elevenTitleLeter" fx:id="elevenTitleLeter" fitHeight="70.0" fitWidth="117.0" layoutX="390.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/ImagenesMenus/LetrasPokemon/d3b71274b8ab5433a7b58b1abed6b8ea%20-%20copia%20(11).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="twelveTitleLeter" fx:id="twelveTitleLeter" fitHeight="70.0" fitWidth="91.0" layoutX="442.0" layoutY="2.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/ImagenesMenus/LetrasPokemon/d3b71274b8ab5433a7b58b1abed6b8ea%20-%20copia%20(12).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="thirteenTitleLeter" fx:id="thirteenTitleLeter" fitHeight="70.0" fitWidth="115.0" layoutX="474.0" layoutY="2.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/ImagenesMenus/LetrasPokemon/d3b71274b8ab5433a7b58b1abed6b8ea%20-%20copia%20(13).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="fifteenTitleLeter" fx:id="fifteenTitleLeter" fitHeight="70.0" fitWidth="101.0" layoutX="548.0" layoutY="2.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/ImagenesMenus/LetrasPokemon/d3b71274b8ab5433a7b58b1abed6b8ea%20-%20copia%20(15).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="twoTitleLeter" fx:id="twoTitleLeter" fitHeight="70.0" fitWidth="100.0" layoutX="45.0" layoutY="2.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/ImagenesMenus/LetrasPokemon/d3b71274b8ab5433a7b58b1abed6b8ea%20-%20copia%20(2).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="threeTitleLeter" fx:id="threeTitleLeter" fitHeight="70.0" fitWidth="99.0" layoutX="76.0" layoutY="2.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/ImagenesMenus/LetrasPokemon/d3b71274b8ab5433a7b58b1abed6b8ea%20-%20copia%20(3).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="fourTitleLeter" fx:id="fourTitleLeter" fitHeight="70.0" fitWidth="121.0" layoutX="107.0" layoutY="10.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/ImagenesMenus/LetrasPokemon/d3b71274b8ab5433a7b58b1abed6b8ea%20-%20copia%20(4).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="fiveTitleLeter" fx:id="fiveTitleLeter" fitHeight="70.0" fitWidth="101.0" layoutX="151.0" layoutY="2.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/ImagenesMenus/LetrasPokemon/d3b71274b8ab5433a7b58b1abed6b8ea%20-%20copia%20(5).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="sixthTitleLeter" fx:id="sixthTitleLeter" fitHeight="70.0" fitWidth="94.0" layoutX="190.0" layoutY="2.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/ImagenesMenus/LetrasPokemon/d3b71274b8ab5433a7b58b1abed6b8ea%20-%20copia%20(6).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="eigthTitleLeter" fx:id="eigthTitleLeter" fitHeight="70.0" fitWidth="99.0" layoutX="257.0" layoutY="2.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/ImagenesMenus/LetrasPokemon/d3b71274b8ab5433a7b58b1abed6b8ea%20-%20copia%20(3).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="nineTitleLeter" fx:id="nineTitleLeter" fitHeight="70.0" fitWidth="62.0" layoutX="320.0" layoutY="2.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/ImagenesMenus/LetrasPokemon/d3b71274b8ab5433a7b58b1abed6b8ea%20-%20copia%20(9).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="tenTitleLeter" fx:id="tenTitleLeter" fitHeight="70.0" fitWidth="99.0" layoutX="357.0" layoutY="2.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/ImagenesMenus/LetrasPokemon/d3b71274b8ab5433a7b58b1abed6b8ea%20-%20copia%20(3).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="forthteenTitleLeter" fx:id="forthteenTitleLeter" fitHeight="70.0" fitWidth="99.0" layoutX="514.0" layoutY="2.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/ImagenesMenus/LetrasPokemon/d3b71274b8ab5433a7b58b1abed6b8ea%20-%20copia%20(3).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Group>
+            <ImageView id="caratulaBtn" fx:id="caratulaBtn" fitHeight="130.0" fitWidth="372.0" layoutX="-47.0" layoutY="269.0" pickOnBounds="true">
                <image>
-                  <Image url="@../../../../../Downloads/vecteezy_pokemon-logo-png-pokemon-icon-transparent-png_27127571.png" />
+                  <Image url="@../../img/ImagenesMenus/360_F_400180751_Z7ZuuWd4opmLROnSBwydJcPV8q44VNNu-removebg-preview.png" />
                </image>
             </ImageView>
-            <Button layoutX="345.0" layoutY="271.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Log in" />
-            <PasswordField layoutX="256.0" layoutY="217.0" promptText="Password" />
-            <Button layoutX="256.0" layoutY="271.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Sign in" />
-            <TextField layoutX="256.0" layoutY="160.0" promptText="Trainer" />
+            <ImageView id="b" fitHeight="45.0" fitWidth="62.0" layoutX="192.0" layoutY="319.0" onMousePressed="#logIn" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/ImagenesMenus/ezgif.com-speed%20(5).gif" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="39.0" layoutX="42.0" layoutY="321.0" onMouseClicked="#salir" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/ImagenesMenus/ezgif.com-speed%20(4).gif" />
+               </image>
+            </ImageView>
+            <ImageView id="btnRegistrar" fx:id="btnRegistrar" fitHeight="45.0" fitWidth="62.0" layoutX="116.0" layoutY="319.0" onMousePressed="#signIn" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+               <image>
+                  <Image url="@../../img/ImagenesMenus/ezgif.com-speed%20(5).gif" />
+               </image>
+            </ImageView>
+            <Text layoutX="46.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EXIT" />
+            <Text layoutX="118.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SIGN IN" />
+            <Text layoutX="195.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG IN" />
+            <ImageView id="caratulaUsuario" fx:id="caratulaUser" fitHeight="80.0" fitWidth="245.0" layoutX="16.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/ImagenesMenus/Captura_de_pantalla_2025-04-08_160533ss-removebg-preview%20(8).png" />
+               </image>
+            </ImageView>
+            <TextField id="txtUser" fx:id="txtUser" layoutX="36.0" layoutY="131.0" prefHeight="39.0" prefWidth="202.0" />
+            <ImageView id="caratulaPass" fx:id="caratulaPass" fitHeight="80.0" fitWidth="245.0" layoutX="15.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/ImagenesMenus/Captura_de_pantalla_2025-04-08_160533ss-removebg-preview%20(8).png" />
+               </image>
+            </ImageView>
+            <PasswordField id="txtPassword" fx:id="txtPassword" layoutX="35.0" layoutY="210.0" prefHeight="39.0" prefWidth="202.0" />
+            <Text fill="WHITE" layoutX="40.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USER" wrappingWidth="72.13671875" />
+            <Text fill="WHITE" layoutX="38.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSWORD" wrappingWidth="72.13671875" />
       </children>
     </AnchorPane>
   </children>

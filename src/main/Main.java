@@ -14,12 +14,14 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/login.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
-        
-        primaryStage.setTitle("ProjectoPokemonBase");
+
+        primaryStage.setTitle("Pokemon Grupo ChatGPT");
         primaryStage.setScene(scene);
-        /*
+        primaryStage.setResizable(false);
+
         LoginController controller = loader.getController();
-        controller.setStage(primaryStage);*/
+        controller.setStage(primaryStage);
+
         primaryStage.show();
     }
 
@@ -28,3 +30,4 @@ public class Main extends Application {
         launch(args);
     }
 }
+

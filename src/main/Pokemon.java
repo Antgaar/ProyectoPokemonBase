@@ -288,4 +288,4 @@ public class Pokemon {
 		poke.setVelocidad((poke.getVelocidad() + 1 + rand.nextInt(5)));
 	}
 }
-}
+
